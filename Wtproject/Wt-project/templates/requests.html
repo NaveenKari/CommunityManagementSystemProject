@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <style>
+        body{
+            background-color: rgb(255, 254, 254);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        #newyork {
+            font-size: 20px;
+        }
+
+        table,th,td{
+            border: 1px solid;
+            width: 90%;
+        }
+        th,td{
+            padding: 3px;
+        }
+        table{
+            margin-top: 9.5%;
+            margin-left: 5%;
+        }
+
+        .btnn{
+            
+            width: 100%;
+        }
+
+
+        header {
+            width: 101%;
+            height: 70px;
+            background-color: #282828;
+            margin-left: -7.5px ;
+            margin-top: -8px;
+            margin-right: 80px;
+        }
+
+
+        header h1 {
+            position: absolute;
+            padding: 3px;
+            float: left;
+            margin-left: 2%;
+            margin-top: 10px;
+            font-family: 'Alfa Slab One', cursive;
+            color: rgb(245, 242, 248);
+        }
+
+        header ul {
+            width: auto;
+            float: right;
+            margin-top: 8px;
+
+        }
+
+
+
+
+        header li {
+            display: inline-block;
+            padding: 15px 30px;
+
+        }
+
+        header a {
+            text-align: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Open-Sans', sans-serif;
+            font-size: 1.2vw;
+
+        }
+
+        header a:hover {
+            color: #F0c330;
+            transition: 0.5s;
+
+        }
+
+
+
+    </style>
+</head>
+
+
+
+<header>
+    <h1>COMMUNITY MANAGEMENT SYSTEM</h1>
+    <nav>
+        <ul>
+            <li><a href="/residenthome">Home</a></li>
+            <li><a href="userrequests">New Requests</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/notice">Notices</a></li>
+            <li><a href="/profile">Settings</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+
+
+<body>
+    <div class="alert alert-{{category}} alert-dismisiible fade show" role="alert">
+        <!-- id down is there in code but i had kept in the comments
+            
+            
+            {{message}}
+      
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    
+      -->
+    </div>
+
+    <table class="table table- table-striped" method="POST">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" style="width:10px;">Name</th>
+                <th scope="col">flatnumber</th>
+                <th scope="col">purpose</th>
+                <th scope="col">Time</th>
+                <th scope="col">Date</th>
+                <th scope="col"> Status</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in query%}
+            <tr>
+                <td>{{post.name}}</td>
+                <td>{{post.flatno}}</td>
+                <td>{{post.visit}}</td>
+                <td>{{post.date}}</td>
+                <td>{{post.time}}</td>
+                <td>{{post.status}}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> 
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+    <head>
+      <style>
+        h2{
+          text-align: center;
+        }
+    ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  body{
+      background-image: url("static/imgjpg.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+  
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: #000;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  p{
+      color:azure;
+  }
+  h1{
+      color:rgb(190, 125, 64);
+      font-family: "Lucida Console", "Courier New", monospace;
+  }
+      </style>
+</head>
+<body>
+<ul>
+    <li><a href="/residenthome">Home</a></li>
+    <li><a href="/booking">booking</a></li>
+    <li><a href="/userrequests">New Requests</a></li>
+    <li><a href="/requests">Total Requests</a></li>
+    <li><a> Daily Services</a></li>
+    <li><a href="/logout">Logout</a></li>
+</ul>
+<br>
+    <h2><i>Welcome to Profile</i></h2>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card">
+    <img src="static/famly.jpg" alt="John" style="width:100%">
+    {% for query in query %}
+    <h1>{{query.username}}</h1>
+    <p><i>Software engineer</i></p>
+    <p>Anits</p>
+    <p> Booking Details</p>
+    <p> Number of Visited Members</p>
+    <p>Flat Number</p>
+    <p><button>Edit Profile</button></p>
+    {% endfor %}
+</div>
+    
+</form>
+</body>
+</html>

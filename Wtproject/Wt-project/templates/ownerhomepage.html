@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 15px;
+            border-radius: 10px;
+            color:rgb(0, 0, 0);
+            background-color: rgb(235, 150, 125);
+            opacity: .9;
+            box-shadow: 1em;
+        }
+        body{
+            background-image: url('static/extra4.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 160%;
+        }
+        h1{
+            text-align: center;
+            color: rgb(214, 97, 93);
+        }
+    </style>
+</head>
+<body>
+    <h1>Community Management System</h1>
+    <br>
+    
+    <br>
+    <marquee behavior="scroll" direction="right">
+    <h2 style="color: brown;">Welcome {{session['user']}} ommunity  Owner!!!</h2></marquee>
+    <center>
+        <br><br>
+    <form action="" method="POST">
+    <button name="resident" value="hi">Resident Details Upload</button>
+    <br><br><br>
+    <button name="security" value="bye">Security details upload</button><br><br><br>
+    <button name="dailyvendors" action="/dailyvendorsupload" value="boy">Daily vendors upload &nbsp;&nbsp;</button><br><br><br>
+    <button name="logout" action="/ownerlogout" value="lol">Logout</button> &nbsp;&nbsp;</button>
+</form>
+</center>
+</body>
+</html>

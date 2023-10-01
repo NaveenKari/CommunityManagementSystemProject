@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>My Example</title>
+
+
+<style>
+.myForm {
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.8em;
+width: 30em;
+padding: 1em;
+border: 1px solid #ccc;
+}
+
+.myForm * {
+box-sizing: border-box;
+}
+
+.myForm fieldset {
+border: none;
+padding: 0;
+}
+
+.myForm legend,
+.myForm label {
+padding: 0;
+font-weight: bold;
+}
+
+.myForm label.choice {
+font-size: 0.9em;
+font-weight: normal;
+}
+
+.myForm label {
+text-align: left;
+display: block;
+}
+
+.myForm input[type="text"],
+.myForm input[type="tel"],
+.myForm input[type="email"],
+.myForm input[type="datetime-local"],
+.myForm select,
+.myForm textarea {
+float: right;
+width: 60%;
+border: 1px solid #ccc;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.9em;
+padding: 0.3em;
+}
+
+.myForm textarea {
+height: 100px;
+}
+label{
+    color:rgb(255, 253, 253);
+}
+body{
+    background-image: url('static/pexels-migs-reyes-4205505.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 170%;
+}
+
+.myForm input[type="radio"],
+.myForm input[type="checkbox"] {
+margin-left: 40%;
+}
+
+.myForm button {
+padding: 1em;
+border-radius: 0.5em;
+background: rgb(255, 252, 252);
+border: none;
+font-weight: bold;
+margin-left: 10%;
+margin-top: 1.8em;
+}
+
+.myForm button:hover {
+background: #ccc;
+cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+    <marquee behavior="scroll" direction="right">
+    <h1 style="text-align: center; color: rgb(255, 255, 255);">Community Management system</h1><br><br><br>
+</marquee>
+    <center>
+<form class="myForm" method="POST">
+<h3 style="color: rgb(255, 255, 255)">Uploading for flat members:</h3>
+<p>
+services
+</p>
+
+<p>
+<label>Username
+<input type="text" name="username" required>
+</label>
+</p>
+
+<p>
+<label>flatno.
+<input type="text" name="flatno" required>
+</label><br>
+<label>password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="password" name="pass" required >
+</label><br>
+<label>Community Name
+<input type="text" name="cmname" required>
+</label><br>
+<label>Phone Number
+<input type="text" name="number" required>
+</label>
+
+
+
+
+<br>
+<button type="submit">Upload </button>
+
+</form>
+</center>
+</body>
+</html>

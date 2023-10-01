@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Gaurd</title>
+
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=PT+Serif:ital,wght@1,700&family=Smooch+Sans&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            background-image: url('pic_notifications_page_7.jpg');
+            background-position:fixed;
+            background-size: cover;
+        }
+
+
+        h1 {
+            background-color: indigo;
+            color: white;
+            font-style: italic;
+            font-variant: small-caps;
+            padding: 20px;
+            margin: 3px 3px 3px 3px;
+
+
+        }
+
+        .first {
+
+            display: flex;
+            justify-content: space-around;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+
+
+        .split_left {
+            float: left;
+            width: 49.99%;
+
+            /*background-color: black;*/
+            /*border: orange 3px solid;*/
+        }
+
+        /*.split_right {
+    float: right;
+    width: 50% ;
+   
+     
+}*/
+        h1 {
+            background-color: indigo;
+            color: rgb(255, 255, 255);
+            font-style: italic;
+            font-variant: small-caps;
+            padding: 20px;
+
+        }
+
+        p {
+            font-size: 35px;
+            color: rgb(24, 39, 133);
+            font-weight: 900;
+            margin-bottom: -20px;
+
+        }   
+
+        label {
+            width: 150px;
+            font-size: 25px;
+            display: inline-block;
+            margin-right: 10px;
+            color:rgb(233, 83, 24) ;
+    
+        }
+
+        form {
+            margin-top: 35px;
+            width: 650px;
+            padding: 75px 0 75px 0;
+            border: black;
+            border-width: 3px;
+            border-style: outset;
+            backdrop-filter: blur(10px);
+
+        }
+
+        legend {
+            border: 10px;
+        }
+
+        .right_heading {
+            font-family: sans-serif;
+            margin-top: -20px;
+            margin-bottom: 0px;
+            font-size: 25px;
+            color: rgb(233, 83, 24);
+
+        }
+
+        .nameing {
+            margin-top: 15px;
+            margin-bottom: 30px;
+            font: 150px;
+        }
+
+        #check_boxes {
+            font-family: sans-serif;
+
+        }
+
+        /*p {
+            border: rgb(16, 103, 153);
+            border-width: 5px;
+            padding: 7px 15px 5px 15px;
+            border-style: solid;
+        }*/
+        
+        .topnav a{
+            color: white;
+            font-size: 25px;
+            margin-top: -500px;
+
+        }
+        a{
+            font-size: 25px;
+            color: white;
+        }
+
+
+
+
+
+        
+    </style>
+</head>
+
+<body>
+    <h1 style="font-size: 40px; height:75px">
+        
+        <!--<div class="topnav">
+            <a class="active" href="#home" style="padding-left:0%">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#profile">Profile</a>
+        </div> -->
+        Community Management System
+        <a class="active" href="#home" style="padding-left:22%">Home</a>
+        &nbsp;
+            <a href="#news">News</a>
+            &nbsp;
+            <a href="#contact">Contact</a>
+            &nbsp;
+            <a href="#about">About</a>
+            &nbsp; 
+            <a href="#profile">Profile</a>
+
+    </h1>
+    <!--<h1 style="background-color: indigo; 
+    color: rgb(255, 255, 255); font-style: italic;font-variant: small-caps;
+    padding: 20px; margin: 3px 0px;">
+        Community Management System
+    </h1>-->
+
+   
+
+    <div class="first">
+
+        <p>Notices</p>
+    </div>
+
+    <div id="spliting">
+
+        <center>
+            <div class="split_right">
+                <form>
+                    <div class="mat">
+                        <h4 class="right_heading" style="font-family: 'Lora', serif;
+                        font-family: 'PT Serif', serif;
+                        font-family: 'Smooch Sans', sans-serif; font-size:45px ;">
+                            <center>Requests Pending : !.....!</center>
+                        </h4>
+                        <center>
+                            <br>
+                            <br>
+                            <div class="nameing" id="names">
+                                <label style="font-size: 25px; font-weight:0;">Name Of Request...{...}</label>
+                            </div>
+                            <div id="check_boxes">
+                                <input type="checkbox" id="accept" name="accept" value="accept">
+                                <label for="accept">Accept</label>
+                                <br>
+                                <br>
+                                <input type="checkbox" id="reject" name="reject" value="reject">
+                                <label for="reject">Reject</label>
+                                <br>
+                                <br>
+                                <br>
+                                <input type="submit" id="submit_checkboxes">
+
+                                <br>
+
+
+                            </div>
+                        </center>
+                    </div>
+                </form>
+            </div>
+
+    </div>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+body{
+    
+            background-size: 100% 220%;
+            background-repeat: no-repeat;
+            background-position: right;
+            background-blend-mode: lighten;
+
+
+}
+table,th,td{
+    border: 1px solid;
+    width: 90%;
+}
+th,td{
+    padding: 3px;
+}
+table{
+    margin-top: 9.5%;
+    margin-left: 5%;
+}
+</style>
+
+<body>
+    <center>
+    <h1>Community management system</h1>
+</center>
+    <center>
+    <h2>{{work}}</h2>
+</center>
+<table class="table table- table-striped" method="POST">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" >Name</th>
+            <th scope="col">area</th>
+            <th scope="col">work</th>
+            <th scope="col">Community Name</th>
+            <th scope="col">PhoneNumber</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in query%}
+        <tr>
+            <td>{{post.name}}</td>
+            <td>{{post.area}}</td>
+            <td>{{post.work}}</td>
+            <td>{{post.cmname}}</td>
+            <td>{{post.phoneno}}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table> 
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+       
+        input {
+            width: 150px;
+        }
+
+        body {
+            background-image: url('static/hall.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 175%;
+        }
+    </style>
+</head>
+
+<body style="margin: 0px 0px;">
+
+    <marquee behavior="scroll" direction="right">
+        <p
+            style=" font-size: 30px; color: rgb(255, 255, 255); font-family: cursive; font-variant: small-caps; text-align: center;">
+            <b>Community Management System</b>
+        </p>
+    </marquee>
+
+
+
+    <br>
+    <center>
+        <div style="border: 2px solid;
+    width: 50%;">
+            <center>
+                <h2 style="color: rgb(255, 255, 255); 
+ ">
+                    &nbsp; Welcome to bookings!!!
+                </h2>
+            </center>
+        </div><br>
+    </center>
+    <center>
+        {% with messages=get_flashed_messages(with_categories=true)%}
+      {% if messages %}
+      {% for category,message in messages %}
+      <div class="alert alert-{{category}} alert-dismisiible fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+        <form action="" style="
+    background-color: rgb(252, 204, 204);
+    padding: 18px;
+    border: 1px solid; width: 35%; 
+     opacity: .9;" method="POST">
+            <center>
+                <div>
+                    Name <input type="text" name="name">
+                    <p>
+                    <label for=""> Amenity:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        <select id="" name="amenity">
+                            <option value="" >select </option>
+                            <option value="Theatre">Theatre</option>
+                            <option value="Function hall">Function hall</option>
+                            <option value="Dance club">Dance club</option>
+                        </select>
+                    </p>
+                    <p>
+                    <h4>Book your Slot<input type="date" name="date"></h4>
+                    </p>
+                    <p>
+                        <h4> Purpose </h4> <textarea rows="5" cols="50" name="purpose"></textarea>
+                    </p>
+                    phoneno <input type="text" name="no">
+                    <p>
+                    <h4>Theatre:1000</h4>
+                    <h4> Function hall :2500</h4>
+                    <h4> Dance club 1500 </h4>
+                    </p>
+                    <input type="submit" value="Book">
+                </div>
+            </center>
+        </form>
+    </center>
+</body>
+
+</html>

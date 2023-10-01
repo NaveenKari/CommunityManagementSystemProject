@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('static/extra5.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 210%;
+        }
+
+        h1 {
+            color: aliceblue;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border-radius: 20px;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button5 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+        }
+
+        .button5:hover {
+            background-color: #555555;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <center>
+        <h1>COMMUNITY MANAGEMENT SYSTEM</h1><br>
+        <h2>Welcome {{session['security']}}!!</h2>
+    </center><br>
+    <form action="" method="POST">
+    <center>
+        <br><br><br>
+        <button class="button button5" name="pr" value="pr">Post a request</button><br>
+        <br><br>
+        <button class="button button5" name="re" value="re">Requests Info</button>
+        <br><br>
+        <button class="button button5" name="res" value="res">Resident Requests</button>
+        <br><br>
+        <button class="button button5" name="lg" value="lg">Logout</button>
+    </center>
+</form>
+</body>
+
+</html>

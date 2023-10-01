@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            form{
+                text-align: center;
+            }
+        input {
+            width: 150px;
+        }
+
+        body {
+            background-image: url('hall.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 175%;
+        }
+        </style>
+    </head>
+    <body>
+        <form class="row g-3" style="width: 50%; padding: 80px;
+    border-color: #b1d0ff; border-width: 3px;  
+    border-spacing: 1px;" action="/residentdetails" method="POST" >
+   
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="name" placeholder="name" required>
+        </div>
+        <div class="col-md-6">
+          
+          <input type="text" class="form-control" name="pass" placeholder="Password" required>
+        </div>
+        <div class="col-12">
+          
+          <input type="text" class="form-control" name="fno" placeholder="Flat Number" required>
+        </div>
+        <div class="col-12">
+          
+            <input type="text" class="form-control" name="uname" placeholder="UserName" required>
+          </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </form>
+        
+  </legend></fieldset>

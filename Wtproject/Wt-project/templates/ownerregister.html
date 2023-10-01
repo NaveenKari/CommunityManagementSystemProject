@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+      body{
+        background-image: url('static/slide-01.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 160%;
+
+      }
+       
+    </style>
+</head>
+
+<body>
+   <marquee behavior="scroll"  direction="right"> <p style=" font-size: 30px; color: rgb(255, 70, 70); font-family: cursive; font-variant: small-caps; text-align: center;">
+        Community Management System
+    </p> </marquee>
+       
+     <center>   
+    <fieldset ><legend style="color: rgb(215, 234, 245);"> Community Owner Registration    
+      {% with messages=get_flashed_messages(with_categories=true)%}
+      {% if messages %}
+      {% for category,message in messages %}
+      <div class="alert alert-{{category}} alert-dismisiible fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+    <form class="row g-3" style="width: 50%; padding: 80px;
+    border-color: #b1d0ff; border-width: 3px;  
+    border-spacing: 1px;" action="/ownerregister" method="POST" >
+   
+        <div class="col-md-6">
+          <input type="email" class="form-control" name="Email" placeholder="Email" required>
+        </div>
+        <div class="col-md-6">
+          
+          <input type="password" class="form-control" name="Password" placeholder="Password" required>
+        </div>
+        <div class="col-12">
+          
+          <input type="text" class="form-control" name="Cname" placeholder="Community Name" required>
+        </div>
+        <div class="col-12">
+          
+            <input type="text" class="form-control" name="number" placeholder="Phone number" required>
+          </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </form>
+        
+  </legend></fieldset>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

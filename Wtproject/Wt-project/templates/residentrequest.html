@@ -1,0 +1,166 @@
+
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+              }
+              
+              body {
+                background-size: cover;
+                width: 100vw;
+                height: 100vh;
+                display: grid;
+                
+                
+                font-size: 12pt;
+                font-family: "Spartan";
+                color: #2A293E;
+              }
+              
+              .contact-us {
+                background: #f8f4e5;
+                padding: 50px 100px;
+                
+              }
+              
+              label, input, textarea {
+                display: block;
+                width: 100%;
+                font-size: 12pt;
+                line-height: 24pt;
+                font-family: "Spartan";
+              }
+              
+              input {
+                margin-bottom: 24pt;
+              }
+              
+              h3 {
+                font-weight: normal;
+                font-size: 10pt;
+                line-height: 24pt;
+                font-style: italic;
+                margin: 0 0 0.5em 0;
+              }
+              li {
+                float: left;
+              }
+              
+              li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+              }
+              
+              /* Change the link color to #111 (black) on hover */
+              li a:hover {
+                background-color: rgb(237, 231, 231);
+              }
+              span {
+                font-size: 8pt;
+              }
+              
+              em {
+                color: #f45702;
+                font-weight: bold;
+              }
+              
+              input, textarea {
+                border: none;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: 2px;
+                background: #f8f4e5;
+                padding-left: 5px;
+                outline: none;
+              }
+              
+              input:focus, textarea:focus {
+                border: 1px solid #6bd4b1;
+              }
+              
+              textarea {
+                resize: none;
+              }
+              
+              button {
+                display: block;
+                float: right;
+                line-height: 24pt;
+                padding: 0 20px;
+                border: none;
+                background: #f45702;
+                color: white;
+                letter-spacing: 2px;
+                transition: 0.2s all ease-in-out;
+                border-bottom: 2px solid transparent;
+                outline: none;
+              }
+              button:hover {
+                background: inherit;
+                color: #f45702;
+                border-bottom: 2px solid #f45702;
+              }
+              
+              ::selection {
+                background: #ffc7b8;
+              }
+              
+              input:-webkit-autofill,
+              input:-webkit-autofill:hover,
+              input:-webkit-autofill:focus,
+              textarea:-webkit-autofill,
+              textarea:-webkit-autofill:hover,
+              textarea:-webkit-autofill:focus {
+                border: 1px solid #6bd4b1;
+                -webkit-text-fill-color: #2A293E;
+                
+                transition: background-color 5000s ease-in-out 0s;
+              }
+              ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #f45702;
+                position: -webkit-sticky; /* Safari */
+                position: sticky;
+                top: 0;
+              }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/residenthome">Home</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/dailyservices">Dailyservices</a></li>
+            <li><a href="/requests">Total Requests</a></li>
+            <li><a href="/userrequests">New requests</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+        {% block content %}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}
+<div class="contact-us">
+    <form  method="POST">
+      <label for="customerName">NAME <em>&#x2a;</em></label><input id="customerName" name="name" required="" type="text" /><label for="customerPhone">PHONE</label><input id="customerPhone" name="customerPhone" type="text" /><label for="purpose">Purpose</label><input id="purpose" name="purpose" type="text" />
+      <label for="time">TIME <em>&#x2a;</em></label><input id="time" name="time" required type="time" />      <label for="date">DATE <em>&#x2a;</em></label><input id="date" name="date" required type="date" />
+    <button type="submit">POST
+
+    </button>
+    </form>
+  </div>
+    </body>
+</html>
